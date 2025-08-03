@@ -94,7 +94,7 @@ public class Main {
             System.out.println("            INVESTIMENTOS");
             System.out.println("=======================================");
             System.out.println("1 - Criar um investimento");
-            System.out.println("2 - Fazer um investimento");
+            System.out.println("2 - Criar uma carteira de investimento");
             System.out.println("3 - Investir");
             System.out.println("4 - Resgatar investimento");
             System.out.println("5 - Listar investimentos");
@@ -151,7 +151,7 @@ public class Main {
     }
     // 2
     private static void deposit() {
-        System.out.println("Para realizar um depósito, informe a chave PIX da conta: ");
+        System.out.println("Para realizar um deposito, informe a chave PIX da conta: ");
         var pix = scanner.next();
         System.out.println("Informe o valor a ser depositado: ");
         System.out.print(">> ");
@@ -178,7 +178,7 @@ public class Main {
     }
 
     private static void transferToAccount() {
-        System.out.println("Insira a chave PIx de origem: ");
+        System.out.println("Insira a chave PIX de origem: ");
         System.out.print(">> ");
         var source = scanner.next();
         System.out.println("Para quem você quer pagar? Insira a chave PIX do destinatário: ");
@@ -246,7 +246,7 @@ public class Main {
             var group = audit.stream()
                     .collect(Collectors.groupingBy(t -> t.createdAt().truncatedTo(SECONDS)));
             group.forEach((time, transactions) -> {
-                System.out.println("Transações em: " + time);
+                System.out.println("Transacoes em: " + time);
                 transactions.forEach(System.out::println);
             });
         } catch (AccountNotFoundException ex) {

@@ -23,7 +23,6 @@ O sistema é dividido em:
 
 ## ✍️ Créditos
 Projeto criado a partir de um modelo fornecido pelo professor no bootcamp **NTT DATA - Java e IA para Iniciantes**, da plataforma DIO.
-Modificado e documentado por Rodrigo Macedo.
 
 ---
 

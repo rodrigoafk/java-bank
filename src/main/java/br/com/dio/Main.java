@@ -135,7 +135,8 @@ public class Main {
         System.out.print(">> ");
         var amount = scanner.nextLong();
         var wallet = accountRepository.create(pix, amount);
-        System.out.println("Conta criada: " + wallet);
+        System.out.println("Conta criada com sucesso! ");
+        printWallet(wallet);
     }
 
     private static void createInvestment() {
@@ -252,4 +253,15 @@ public class Main {
             System.out.println(ex.getMessage());
         }
     }
+
+    private static void printWallet(AccountWallet wallet) {
+        System.out.println("Chaves PIX: " + String.join(", ", wallet.getPix()));
+        System.out.println("Saldo atual: R$ " + formatCents(wallet.getFunds()));
+    }
+
+    private static String formatCents(long centavos) {
+        return String.format("%.2f", centavos / 100.0);
+    }
+
+
 }
